@@ -10,6 +10,8 @@
     @endif
 
     <div class="pull-right">
-        <small class="text-component-{{ $component->status }} {{ $component->status_color }}" data-toggle="tooltip" title="{{ trans('cachet.components.last_updated', ['timestamp' => $component->updated_at_formatted]) }}">{{ $component->human_status }}</small>
+        <small class="text-component-{{ $component->status }} {{ $component->status_color }}" data-toggle="tooltip" title="{{ trans('cachet.components.last_updated', ['timestamp' => $component->updated_at_formatted]) }}">
+            <i class="ion {{ $component->status_icon }} text-component-{{ $component->status }} {{ $component->status_color }}"title="{{ $component->human_status }}"></i>
+        </small>
     </div>
 </li>

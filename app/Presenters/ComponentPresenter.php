@@ -26,6 +26,18 @@ class ComponentPresenter extends BasePresenter implements Arrayable
      *
      * @return string
      */
+
+    public function status_icon()
+    {
+        switch ($this->wrappedObject->status) {
+            case 0: return 'ion-ios-help-outline';
+            case 1: return 'ion-android-done';
+            case 2: return 'ion-ios-minus';
+            case 3: return 'ion-android-warning';
+            case 4: return 'ion-close-round';
+        }
+    }
+
     public function status_color()
     {
         switch ($this->wrappedObject->status) {

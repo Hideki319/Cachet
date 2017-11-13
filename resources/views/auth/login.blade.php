@@ -7,7 +7,7 @@
     <div class="row">
         <div class="form-bg">
             <div class="logo">
-                <img src="{{ asset('/img/cachet-logo@2x.png') }}" class="img-responsive">
+                <img src="{{ asset('/img/logo.png') }}" class="img-responsive">
             </div>
 
             <form method="POST" action="{{ route('auth.login', [], false) }}" accept-charset="UTF-8" autocomplete="off" name="{{ str_random(10) }}">
