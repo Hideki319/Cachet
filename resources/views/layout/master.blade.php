@@ -28,13 +28,13 @@
     <meta name="msapplication-TileColor" content="{{ $theme_greens }}" />
     <meta name="msapplication-TileImage" content="{{ asset('/img/favicon.png') }}" />
 
-    @if (isset($favicon))
-    <link rel="icon" href="{{ asset("/img/{$favicon}.ico") }}" type="image/x-icon">
+    <!-- @if (isset($favicon))
+    <link rel="icon" href="{{ asset("/img/favicon.ico") }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset("/img/{$favicon}.png") }}" type="image/png">
-    @else
+    @else -->
     <link rel="icon" href="{{ asset('/img/favicon.ico') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('/img/favicon.png') }}" type="image/png">
-    @endif
+    <!-- @endif -->
 
     <link rel="apple-touch-icon" href="{{ asset('/img/apple-touch-icon.png') }}">
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('/img/apple-touch-icon-57x57.png') }}">
