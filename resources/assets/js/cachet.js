@@ -71,6 +71,7 @@ $(function () {
 
     $('abbr.timeago').each(function () {
         var $el = $(this);
+        if($el.closest( ".schedule" ).attr('class') == undefined)
         $el
             .livestamp($el.data('timeago'))
             .tooltip();

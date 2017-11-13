@@ -7,7 +7,8 @@
         <strong>{{ $componentGroup->name }}</strong>
 
         <div class="pull-right">
-            <i class="ion ion-ios-circle-filled text-component-{{ $componentGroup->lowest_status }} {{ $componentGroup->lowest_status_color }}" data-toggle="tooltip" title="{{ $componentGroup->lowest_human_status }}"></i>
+            <!-- <i class="ion ion-ios-circle-filled text-component-{{ $componentGroup->lowest_status }} {{ $componentGroup->lowest_status_color }}" data-toggle="tooltip" title="{{ $componentGroup->lowest_human_status }}"></i> -->
+            <i class="ion {{ $componentGroup->lowest_status_icon }} text-component-{{ $componentGroup->lowest_status }} {{ $componentGroup->lowest_status_color }}" data-toggle="tooltip" title="{{ $componentGroup->lowest_human_status }}"></i>
         </div>
     </li>
 
@@ -32,3 +33,26 @@
     @each('partials.component', $ungrouped_components, 'component')
 </ul>
 @endif
+
+<div style="display: flex; justify-content: space-around; padding: 0 15px;">
+    <div>
+        <i class="ion ion-ios-help-outline text-component-0"></i>
+        <small class="text-component-0">Unknown</small>
+    </div>
+    <div>
+        <i class="ion ion-android-done text-component-1"></i>
+        <small class="text-component-1">Operational</small>
+    </div>
+    <div>
+        <i class="ion ion-ios-minus text-component-2"></i>
+        <small class="text-component-2">Performance Issues</small>
+    </div>
+    <div>
+        <i class="ion ion-android-warning text-component-3"></i>
+        <small class="text-component-3">Partial Outage</small>
+    </div>
+    <div>
+        <i class="ion ion-close-round text-component-4"></i>
+        <small class="text-component-4">Major Outage</small>
+    </div>
+</div>
